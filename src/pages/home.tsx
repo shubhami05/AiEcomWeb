@@ -37,6 +37,27 @@ const Home = () => {
       });
     }
   }, []);
+  const [formData, setFormData] = useState({
+    question: ""
+  });
+
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log("Form submitted:", formData);
+    // Reset form
+    setFormData({ question: "" });
+  };
+
 
   const highlights = [
     {
@@ -128,9 +149,9 @@ const Home = () => {
                 <br className="sm:hidden block" />
                 <span className="text-primary">Build Your Own</span>
                 <br className="block" />
-                E-commerce Empire 
+                E-commerce Empire
                 <br className="sm:hidden block" />
-                 from{" "}
+                from{" "}
                 <br className="hidden sm:block" />
                 <span className="text-gray-900">Scratch</span>
               </h1>
@@ -251,7 +272,7 @@ const Home = () => {
               return (
                 <Card
                   key={index}
-                  className={`bg-gradient-to-br bg-primary-10 rounded-2xl p-8 text-center hover:shadow-lg hover:bg-teal-100 transition-all duration-300 group border-0 cursor-pointer`}
+                  className={`bg-gradient-to-br bg-primary-10 rounded-2xl p-8 text-center hover:shadow-lg hover:bg-teal-100 transition-all duration-300 group border-0 cursor-pointer shadow-lg`}
                   data-aos="fade-up"
                   data-aos-delay={`${(index + 1) * 100}`}
                 >
@@ -281,42 +302,43 @@ const Home = () => {
       {/* FAQ */}
       <section id="contact" className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* FAQ Content */}
+          {/* FAQ Content */}
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4 text-gray-900 font-title">
+            Frequently <span className="text-primary">Asked Questions</span>
+          </h2>
+          <p className="text-lg text-center text-secondary max-w-2xl mx-auto font-content">
+            Got questions? Browse our most frequently asked questions below.
+          </p>
+          <div className="grid lg:grid-cols-2 gap-16 mt-24 items-start">
             <div data-aos="fade-right">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-title">
-                Frequently <span className="text-primary">Asked Questions</span>
-              </h2>
-              <p className="text-lg text-secondary mb-8 font-content">
-                Get answers to common questions about our e-commerce training
-                program
-              </p>
-
               <div className="space-y-4">
                 {faqs.map((question, index) => (
                   <Card
                     key={index}
-                    className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+                    className="bg-white rounded-xl  shadow-md border border-gray-100 overflow-hidden "
                   >
                     <CardContent className="p-0">
                       <button
-                        className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                        className="w-full px-6 py-4 text-left flex items-center justify-between transition-colors hover:text-teal-500"
                         onClick={() => toggleFAQ(index)}
                       >
-                        <span className="font-medium text-gray-900 font-content">
+                        <span className="font-medium font-content transition-colors">
                           {question}
                         </span>
-                        {expandedFAQ === index ? (
-                          <ChevronUp
-                            className="text-primary transition-transform duration-200"
-                            size={20}
-                          />
-                        ) : (
-                          <ChevronDown
-                            className="text-primary transition-transform duration-200"
-                            size={20}
-                          />
-                        )}
+                        <div className="p-1 bg-teal-500 rounded-full">
+
+                          {expandedFAQ === index ? (
+                            <ChevronUp
+                              className="text-white transition-transform duration-200"
+                              size={20}
+                            />
+                          ) : (
+                            <ChevronDown
+                              className="text-white transition-transform duration-200"
+                              size={20}
+                            />
+                          )}
+                        </div>
                       </button>
                       {expandedFAQ === index && (
                         <div className="px-6 pb-4">
@@ -347,47 +369,36 @@ const Home = () => {
                 ))}
               </div>
 
-              <div className="mt-8">
-                <Button className="bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-primary-dark transition-colors inline-flex items-center font-button">
-                  Send Question
-                  <Send className="ml-2" size={16} />
-                </Button>
-              </div>
+
             </div>
 
             {/* Illustration */}
             <div className="hidden lg:block" data-aos="fade-left">
-              <Card className="bg-white rounded-3xl p-8 shadow-lg">
-                <CardContent className="p-0">
-                  <div className="text-center">
-                    <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-primary/40 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <HelpCircle className="text-primary text-5xl" size={60} />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4 font-title">
-                      Need More Help?
-                    </h3>
-                    <p className="text-secondary mb-6 font-content">
-                      Our support team is ready to answer any questions you
-                      might have about getting started with e-commerce.
-                    </p>
-
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-center space-x-3 text-sm text-secondary">
-                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                        <span className="font-content">24/7 Phone Support</span>
-                      </div>
-                      <div className="flex items-center justify-center space-x-3 text-sm text-secondary">
-                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                        <span className="font-content">Email Support</span>
-                      </div>
-                      <div className="flex items-center justify-center space-x-3 text-sm text-secondary">
-                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                        <span className="font-content">Live Chat</span>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <img src="/Questions.png" alt="FAQ image" className="w-full h-full object-cover" />
+              <p className="text-center text-secondary">Ask anything you want to know about Stock Market Investments</p>
+              <form onSubmit={handleSubmit} className="space-y-6 mt-4 mx-8">
+                <div>
+                  <input
+                    type="text"
+                    id="question"
+                    name="question"
+                    value={formData.question}
+                    onChange={handleInputChange}
+                    placeholder="Enter Your Question Here"
+                    className="w-full px-4 py-3 border-2 border-primary/30 rounded-lg focus:outline-none focus:border-primary transition-colors font-content"
+                    required
+                  />
+                </div>
+                <div className="mt-8 flex justify-end">
+                  <Button className="bg-primary text-white px-6 h-14 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-lg font-semibold hover:bg-primary-dark transition-colors inline-flex items-center justify-center group font-button">
+                    Send Question
+                    <Send
+                      className="ml-2  group-hover:translate-x-1 transition-transform"
+                      size={20}
+                    />
+                  </Button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

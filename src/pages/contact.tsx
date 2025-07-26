@@ -5,22 +5,22 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 const Contact = () => {
+  useEffect(() => {
+   // Initialize AOS
+   if (window.AOS) {
+     window.AOS.init({
+       duration: 1000,
+       once: true,
+       offset: 100,
+     });
+   }
+ }, []);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: ""
   });
 
- useEffect(() => {
-  // Initialize AOS
-  if (window.AOS) {
-    window.AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 100,
-    });
-  }
-}, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
