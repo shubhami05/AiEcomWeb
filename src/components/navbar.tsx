@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-sm border-b sticky top-0 z-50" data-aos="fade-down">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center sm:h-16 h-full">
           {/* Logo */}
           <div className="flex items-center">
             <Link
@@ -44,7 +44,7 @@ const Navbar = () => {
               className="flex-shrink-0 flex items-center hover:opacity-80 transition-opacity"
             >
               <img src="/Logo.png" alt="Logo" className="h-14 w-auto bg-transparent" />
-              <div className="flex flex-col">
+              <div className="flex sm:flex-col space-x-1 sm:space-x-0 sm:-space-y-2   ">
               <span className="text-lg font-bold text-gray-900 font-logo">
                 AI E-commerce
               </span>
@@ -57,7 +57,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          <div className="hidden md:block ">
             <div className=" flex items-baseline space-x-2">
               {navItems.map((item, index) =>
                 item.isPage ? (
@@ -113,26 +113,23 @@ const Navbar = () => {
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+            className="fixed h-screen inset-0 bg-black bg-opacity-50 z-40 md:hidden"
             onClick={() => setIsMobileMenuOpen(false)}
           />
 
           {/* Sidebar */}
-          <div className="fixed top-0 right-0 h-full w-72 sm:w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 md:hidden">
-            <div className="flex flex-col h-full">
+          <div className="fixed top-0 right-0 h-screen w-72 sm:w-80 bg-teal-50 shadow-2xl transform transition-transform duration-300 ease-in-out z-50 md:hidden">
+            <div className="flex flex-col h-screen">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b">
-                <div className="flex items-center">
-                  <Bot className="text-primary text-xl mr-2" size={24} />
-                  <span className="text-lg font-bold text-gray-900 font-logo">AI E-commerce Expert</span>
-                </div>
+               
                 <Button
                   variant="ghost"
-                  size="sm"
+                  size="icon"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-gray-900 hover:text-primary"
                 >
-                  <X size={24} />
+                  <X size={28} />
                 </Button>
               </div>
 

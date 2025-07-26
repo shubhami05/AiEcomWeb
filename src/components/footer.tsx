@@ -1,4 +1,4 @@
-import { Bot, Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail } from "lucide-react";
+import { Bot, Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail, X } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -24,39 +24,17 @@ const Footer = () => {
 
   const followUsLinks = [
     { icon: Linkedin, label: "LinkedIn", href: "#" },
-    { icon: Twitter, label: "Twitter", href: "#" },
     { icon: Facebook, label: "Facebook", href: "#" },
     { icon: Instagram, label: "Instagram", href: "#" },
   ];
 
   return (
-    <footer className="bg-primary text-white py-16">
+    <footer className="bg-gradient-to-b from-teal-50 to-teal-100 text-black py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1" data-aos="fade-up">
-            <div className="flex items-center mb-6">
-              <Bot className="text-white text-2xl mr-3" size={28} />
-              <span className="text-xl font-bold font-logo">AI E-commerce Expert</span>
-            </div>
-            <p className="text-primary-light mb-6 opacity-90 font-content">
-              Empowering entrepreneurs to build successful e-commerce businesses with AI-powered training and expert guidance.
-            </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social, index) => {
-                const IconComponent = social.icon;
-                return (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
-                    aria-label={social.label}
-                  >
-                    <IconComponent size={18} />
-                  </a>
-                );
-              })}
-            </div>
+           <img src="/Footer_logo.png" alt="Footer logo" className="h-64 w-64"/>
           </div>
 
           {/* Quick Links */}
@@ -142,7 +120,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="border-t border-white/20 mt-12 pt-8 text-center">
           <p className="opacity-75 text-sm font-content">
-            © 2024 AI E-commerce Expert. All Rights Reserved.
+            © 2025 AI E-commerce Expert. All Rights Reserved.
           </p>
         </div>
       </div>

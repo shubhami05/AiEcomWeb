@@ -191,7 +191,7 @@ const Home = () => {
           </div>
 
           {/* Highlights list */}
-          <div className="order-1 lg:order-2 lg:relative flex justify-center lg:justify-start" data-aos="fade-left">
+          <div className="order-1 lg:order-2 lg:relative flex justify-center lg:justify-start" data-aos="fade-left" data-aos-delay="100">
             {/* Highlights with proper spacing */}
             <div className="space-y-8 relative">
               {highlights.map((highlight, index) => {
@@ -303,14 +303,15 @@ const Home = () => {
       <section id="contact" className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* FAQ Content */}
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4 text-gray-900 font-title">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4 text-gray-900 font-title" data-aos="fade-up">
             Frequently <span className="text-primary">Asked Questions</span>
           </h2>
-          <p className="text-lg text-center text-secondary max-w-2xl mx-auto font-content">
+          <p className="text-lg text-center text-secondary max-w-2xl mx-auto font-content"
+          data-aos="fade-up" data-aos-delay="100">
             Got questions? Browse our most frequently asked questions below.
           </p>
           <div className="grid lg:grid-cols-2 gap-16 mt-24 items-start">
-            <div data-aos="fade-right">
+            <div data-aos="fade-right" data-aos-delay="200">
               <div className="space-y-4">
                 {faqs.map((question, index) => (
                   <Card
@@ -373,7 +374,7 @@ const Home = () => {
             </div>
 
             {/* Illustration */}
-            <div className="hidden lg:block" data-aos="fade-left">
+            <div className="block" data-aos="fade-left" data-aos-delay="200">
               <img src="/Questions.png" alt="FAQ image" className="w-full h-full object-cover" />
               <p className="text-center text-secondary">Ask anything you want to know about Stock Market Investments</p>
               <form onSubmit={handleSubmit} className="space-y-6 mt-4 mx-8">
@@ -389,7 +390,7 @@ const Home = () => {
                     required
                   />
                 </div>
-                <div className="mt-8 flex justify-end">
+                <div className="mt-8 flex sm:justify-end justify-center">
                   <Button className="bg-primary text-white px-6 h-14 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-lg font-semibold hover:bg-primary-dark transition-colors inline-flex items-center justify-center group font-button">
                     Send Question
                     <Send
@@ -404,8 +405,6 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="about"></section>
-      <section id="pricing"></section>
 
       <Footer />
     </div>
