@@ -90,7 +90,7 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors font-button">
-              Get Started
+              Inquiry
             </Button>
           </div>
 
@@ -168,7 +168,7 @@ const Navbar = () => {
               {/* CTA Button */}
               <div className="p-6 border-t">
                 <Button className="w-full bg-gray-900 text-white py-3 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors font-button">
-                  Subscribe
+                  Inquiry
                 </Button>
               </div>
             </div>
