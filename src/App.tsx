@@ -11,6 +11,7 @@ import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
 import { useLocation } from 'wouter';
 import { useEffect, useRef } from 'react';
+import { Footer } from "react-day-picker";
 
 
 // Initialize AOS

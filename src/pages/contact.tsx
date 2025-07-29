@@ -43,9 +43,9 @@ const Contact = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="py-20 lg:py-32">
+      <section className="py-20 lg:py-22">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12" data-aos="fade-down">
+          <div className="text-center mb-20" data-aos="fade-down">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6 font-title px-4">
               Stay <span className="text-primary">Connected</span>
             </h1>
@@ -75,7 +75,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         placeholder="Your Name"
-                        className="w-full px-4 py-3 border-2 border-primary/30 rounded-lg focus:outline-none focus:border-primary transition-colors font-content"
+                        className="w-full px-4 py-3 border-2 border-primary/30 rounded-lg focus:outline-none focus:border-green-500 transition-colors font-content"
                         required
                       />
                     </div>
@@ -91,7 +91,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="Your Email Address"
-                        className="w-full px-4 py-3 border-2 border-primary/30 rounded-lg focus:outline-none focus:border-primary transition-colors font-content"
+                        className="w-full px-4 py-3 border-2 border-primary/30 rounded-lg focus:outline-none focus:border-green-500 transition-colors font-content"
                         required
                       />
                     </div>
@@ -107,7 +107,7 @@ const Contact = () => {
                         onChange={handleInputChange}
                         placeholder="Type your message here"
                         rows={6}
-                        className="w-full px-4 py-3 border-2 border-primary/30 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none font-content"
+                        className="w-full px-4 py-3 border-2 border-primary/30 rounded-lg focus:outline-none focus:border-green-500 transition-colors resize-none font-content"
                         required
                       />
                     </div>
@@ -115,7 +115,7 @@ const Contact = () => {
                     <div className="text-center">
                       <Button 
                         type="submit"
-                        className="bg-primary text-white px-12 py-4 rounded-full text-lg font-semibold hover:bg-primary-dark transition-colors font-button"
+                        className="bg-green-500 text-white px-12 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition-colors font-button"
                       >
                         Submit
                       </Button>
@@ -126,55 +126,8 @@ const Contact = () => {
             </div>
 
             {/* Illustration */}
-            <div className="relative" data-aos="fade-left" data-aos-delay="500">
-              <div className="bg-gradient-to-br from-primary/20 to-primary/40 rounded-3xl p-8 relative overflow-hidden min-h-[500px] flex items-center justify-center">
-                {/* Customer service illustration */}
-                <div className="relative w-full h-full">
-                  {/* Central figure - customer service representative */}
-                  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-white rounded-2xl p-6 shadow-lg">
-                      <div className="flex items-center justify-center mb-4">
-                        <div className="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center">
-                          <div className="w-8 h-8 bg-white rounded-full"></div>
-                        </div>
-                      </div>
-                      <div className="w-20 h-12 bg-gray-300 rounded-lg mx-auto"></div>
-                    </div>
-                  </div>
-
-                  {/* Floating communication icons */}
-                  <div className="absolute top-8 left-8 bg-white rounded-xl p-3 shadow-lg">
-                    <div className="w-8 h-6 bg-green-400 rounded"></div>
-                    <div className="w-6 h-1 bg-gray-300 rounded mt-1"></div>
-                    <div className="w-4 h-1 bg-gray-300 rounded mt-1"></div>
-                  </div>
-
-                  <div className="absolute top-12 right-8 bg-white rounded-xl p-3 shadow-lg">
-                    <div className="grid grid-cols-3 gap-1">
-                      {[...Array(9)].map((_, i) => (
-                        <div key={i} className="w-2 h-2 bg-green-400 rounded"></div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="absolute bottom-32 left-8 bg-white rounded-xl p-3 shadow-lg">
-                    <div className="w-6 h-6 bg-blue-400 rounded-full mb-2"></div>
-                    <div className="w-8 h-1 bg-gray-300 rounded"></div>
-                  </div>
-
-                  <div className="absolute bottom-40 right-12 bg-white rounded-xl p-3 shadow-lg">
-                    <div className="w-8 h-6 bg-gray-200 rounded mb-1"></div>
-                    <div className="w-6 h-1 bg-green-400 rounded"></div>
-                  </div>
-
-                  {/* Stars for rating */}
-                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <div key={i} className="w-4 h-4 bg-yellow-400 transform rotate-45"></div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+            <div className="flex justify-center" data-aos="fade-left" data-aos-delay="500">
+              <img src="/Contact_us.png" alt="contact image"/>
             </div>
           </div>
         </div>

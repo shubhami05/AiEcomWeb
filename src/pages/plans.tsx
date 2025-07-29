@@ -110,7 +110,7 @@ const Plans = () => {
       </section >
 
       <section>
-        <p className="text-sm text-secondary w mx-14 mb-8 font-content">
+        <p className="text-sm text-secondary w sm:mx-24 mx-4 text-justify mb-8 font-content">
           Terms & Conditions
           <br />
           1. By enrolling in any training program offered by A1 E-commerce Expert, you (“the user”) agree to abide by all the terms outlined herein, including any future amendments that may be made without prior notification.
