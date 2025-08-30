@@ -1,0 +1,156 @@
+import Navbar from "@/components/navbar";
+import { useEffect } from "react";
+import Footer from "@/components/footer"
+
+const About = () => {
+  useEffect(() => {
+    // Initialize AOS
+    if (window.AOS) {
+      window.AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+    }
+  }, []);
+
+  return (
+    <div className="min-h-screen w-full bg-white" style={{overflowY: 'hidden'}}>
+      <Navbar />
+      {/* Decorative Shape Images */}
+      {/* Top Right Shape */}
+
+
+      {/* Navbar placeholder */}
+
+
+      {/* Main Content */}
+      <section className="py-20 lg:py-32 relative">
+        
+
+
+
+
+        {/* Bottom Left Shape */}
+        
+        <div className="max-w-7xl sm:mx-auto px-4 mx-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+
+            
+
+
+            {/* Text Content Founder */}
+            <div data-aos="fade-right">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight mb-8">
+              Meet Our <span className="text-green-500">Founder & CEO</span>
+              </h1>
+
+              <div className="mb-8 ">
+                <p className="text-lg text-gray-900 mb-4 ml-4">
+                   With over 5 years of hands-on experience in global e-commerce and digital entrepreneurship, Ajay Prajapati founded A1 E-commerce Expert to empower students and aspiring business owners with real-world knowledge.
+                </p>
+              </div>
+
+              <p className="text-lg ml-4 text-gray-900">
+                <span>“E-commerce and dropshipping aren’t just trends — they are the future of how businesses will operate globally. Those who learn it today, lead tomorrow.”</span>
+              </p>
+              <br />
+              <br />
+              <p className="text-lg ml-4 text-gray-900">
+                <span className="italic">~Ajay Prajapati , CEO & Mentor</span>
+              </p>
+            </div>
+
+            {/* Founder Image */}
+            <div className="flex justify-center lg:justify-center" data-aos="fade-left">
+              <div className="relative">
+                <div className="w-80 h-96 rounded-2xl border-4 border-primary overflow-hidden shadow-2xl">
+                  <img
+                    src="/founder-ajay.jpg"
+                    alt="Ajay Prajapati - Founder & CEO"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to a placeholder if image doesn't exist
+                      e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80";
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </section >
+
+
+      <section className="py-0 lg:py-1 relative">
+        
+
+
+        <div className="absolute z-0 sm:-bottom-20 bottom-20 -right-5 w-[800px] h-[800px] pointer-events-none">
+          <img
+            src="/About_side2.png"
+            alt="left decoration"
+            className="w-full h-full object-contain opacity-50"
+          />
+        </div>
+
+        {/* Bottom Left Shape */}
+        <div className="absolute sm:block hidden z-0 -bottom-20 -left-5 w-[600px] h-[600px] pointer-events-none">
+          <img
+            src="/About_side1.png"
+            alt="right decoration"
+            className="w-full h-full object-contain opacity-50"
+          />
+        </div>
+        <div className="max-w-7xl sm:mx-auto px-4 mx-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+
+            
+
+
+            {/* Text Content */}
+            <div data-aos="fade-right">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight mb-8">
+                Who We Are
+              </h1>
+
+              <div className="mb-8 ">
+                <p className="text-lg text-gray-900 mb-4 ml-4">
+                  <span className="text-green-500 font-medium">Bulls & Bears</span> is a data-driven stock market insights platform designed to help <em>traders and investors</em> make smarter decisions. While we do not provide financial advisory services, our team of experienced analysts shares stock recommendations based on extensive market research.
+                </p>
+              </div>
+
+              <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-6">
+                Our <span className="text-green-500">Mission</span>
+              </h2>
+
+              <p className="text-lg ml-4 text-gray-900">
+                To provide <span className="italic">reliable, educational and insightful</span> stock market analysis that empowers investors and traders to navigate the stock market with confidence.
+              </p>
+            </div>
+
+            {/* Illustration */}
+            <div className="flex items-end h-full" data-aos="fade-left">
+              <img
+                src="/About_main.png"
+                alt="Team working together"
+                className="rounded-lg"
+              />
+
+            </div>
+          </div>
+        </div>
+      </section >
+
+
+      {/* Footer placeholder */}
+      <div className=" absolute w-full">
+        <Footer />
+      </div>
+    </div >
+  );
+};
+
+export default About;
