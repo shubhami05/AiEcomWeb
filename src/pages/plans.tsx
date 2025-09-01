@@ -79,7 +79,7 @@ const Plans = () => {
     {
       icon: CheckCircle,
       title: "3 Months Plan",
-      price: "₹20,000",
+      price: "₹30,000",
       description: "Core Dropshipping Training + Amazon Basics + Product Research Techniques",
       bgColor: "bg-gradient-to-br from-gray-50 to-gray-100",
       iconBg: "bg-green-200",
@@ -87,9 +87,9 @@ const Plans = () => {
     },
     {
       icon: CheckCircle,
-      title: "3 Months Plan",
-      price: "₹20,000",
-      description: "Core Dropshipping Training + Amazon Basics + Product Research Techniques",
+      title: "6 Months Plan",
+      price: "₹45,000",
+      description: "Everything in 3 Months + Winning Product Hunting + Paid Ads + Automation Tools",
       bgColor: "bg-gradient-to-br from-gray-50 to-gray-100",
       iconBg: "bg-green-200",
       iconColor: "text-green-600",
@@ -178,7 +178,7 @@ const Plans = () => {
           <br />
           1. By enrolling in any training program offered by A1 E-commerce Expert, you (“the user”) agree to abide by all the terms outlined herein, including any future amendments that may be made without prior notification.
           <br />
-          2. All payments made towards any plan (₹20,000 for 3 months or ₹30,000 for 6 months) are strictly non-refundable and non-transferable under any circumstances, including but not limited to dissatisfaction, technical issues, lack of time, or change in interest.
+          2. All payments made towards any plan (₹30,000 for 3 months or ₹45,000 for 6 months) are strictly non-refundable and non-transferable under any circumstances, including but not limited to dissatisfaction, technical issues, lack of time, or change in interest.
           <br />
           3. The services provided under these plans are educational in nature and A1 E-commerce Expert does not guarantee business success, revenue generation, or marketplace approvals as outcomes are dependent on individual effort, compliance, and market behavior.
           <br />
@@ -208,7 +208,7 @@ const Plans = () => {
       </section>
 
       {/* Enrollment Form Modal */}
-      {showForm && (
+      {showForm && (  
         <>
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50" onClick={() => setShowForm(false)} />
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-hidden">
@@ -334,7 +334,7 @@ const Plans = () => {
         <>
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50" onClick={() => setShowPayment(false)} />
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-hidden">
-            <div className="bg-white rounded-2xl p-0 w-full max-w-4xl max-h-[90vh] overflow-hidden shadow-2xl">
+            <div className="bg-white rounded-2xl p-0 w-full max-w-4xl max-h-[90vh] overflow-au  to shadow-2xl">
               {/* Header */}
               <div className="bg-gradient-to-r from-primary to-primary-dark p-6 text-white">
                 <div className="flex justify-between items-center">
@@ -343,7 +343,7 @@ const Plans = () => {
                     variant="ghost"
                     size="icon"
                     onClick={() => setShowPayment(false)}
-                    className="text-white hover:bg-white/20"
+                    className="text-gray-800  hover:text-gray-800 hover:bg-gray-200/40"
                   >
                     <X size={24} />
                   </Button>
@@ -369,7 +369,7 @@ const Plans = () => {
                           <p className="font-medium text-gray-900 font-content text-lg">{selectedPlan}</p>
                           <p className="text-sm text-gray-500 font-content">E-commerce Training Program</p>
                         </div>
-                        <p className="font-semibold text-gray-900 font-title text-lg">₹20,000</p>
+                        <p className="font-semibold text-gray-900 font-title text-lg">₹30,000</p>
                       </div>
                       
                       <div className="flex justify-between items-center py-3 border-b border-gray-200">

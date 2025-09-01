@@ -9,12 +9,12 @@ const Admin = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex items-center">
+            <Link to="/admin" className="flex items-center">
               <img src="/Logo.png" alt="Logo" className="h-10 w-auto" />
               <span className="ml-3 text-lg font-bold text-gray-900">
                 A1 Ecommerce Expert
               </span>
-            </div>
+            </Link>
 
             {/* Navigation */}
             <div className="flex items-center space-x-8">
@@ -36,9 +36,11 @@ const Admin = () => {
               >
                 Feedback
               </Link>
-              <Button className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800 border-b-2 border-gray-900">
-                Admin
-              </Button>
+              <Link href="/">
+                <Button className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800">
+                  Logout
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

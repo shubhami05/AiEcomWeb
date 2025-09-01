@@ -77,13 +77,13 @@ const AdminFeedback = () => {
   ];
 
   const filteredFeedback = feedbackData.filter(feedback => {
-    const matchesSearch = 
+    const matchesSearch =
       feedback.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       feedback.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
       feedback.feedback.toLowerCase().includes(searchTerm.toLowerCase());
-    
+
     const matchesCategory = selectedCategory === "all" || feedback.category === selectedCategory;
-    
+
     return matchesSearch && matchesCategory;
   });
 
@@ -125,18 +125,18 @@ const AdminFeedback = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-50">
+    <div className="min-h-screen bg-white" >
       {/* Header with Navigation */}
       <div className="bg-gradient-to-r from-cyan-100 to-blue-100 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex items-center">
+            <Link to="/admin" className="flex items-center">
               <img src="/Logo.png" alt="Logo" className="h-10 w-auto" />
               <span className="ml-3 text-lg font-bold text-gray-900">
                 A1 Ecommerce Expert
               </span>
-            </div>
+            </Link>
 
             {/* Navigation */}
             <div className="flex items-center space-x-8">
@@ -158,9 +158,9 @@ const AdminFeedback = () => {
               >
                 Feedback
               </Link>
-              <Link href="/admin">
+              <Link href="/">
                 <Button className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800">
-                  Admin
+                  Logout
                 </Button>
               </Link>
             </div>
@@ -169,14 +169,14 @@ const AdminFeedback = () => {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 ">
         {/* Page Title and Search */}
         <div className="flex justify-between items-center mb-8">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Feedback Management</h1>
             <p className="text-gray-600 mt-1">Manage and respond to user feedback</p>
           </div>
-          
+
           <div className="flex items-center space-x-4">
             <select
               value={selectedCategory}
@@ -192,7 +192,7 @@ const AdminFeedback = () => {
               <option value="suggestion">Suggestion</option>
               <option value="complaint">Complaint</option>
             </select>
-            
+
             <div className="relative w-80">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
               <Input
@@ -219,7 +219,7 @@ const AdminFeedback = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <div className="flex items-center">
               <div className="p-2 bg-blue-100 rounded-lg">
@@ -233,7 +233,7 @@ const AdminFeedback = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <div className="flex items-center">
               <div className="p-2 bg-yellow-100 rounded-lg">
@@ -247,7 +247,7 @@ const AdminFeedback = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <div className="flex items-center">
               <div className="p-2 bg-green-100 rounded-lg">
@@ -285,7 +285,7 @@ const AdminFeedback = () => {
                   </Badge>
                 </div>
               </div>
-              
+
               <div className="flex items-center mb-4">
                 <div className="flex items-center space-x-1">
                   {[1, 2, 3, 4, 5].map((star) => (
@@ -299,11 +299,11 @@ const AdminFeedback = () => {
                 </div>
                 <span className="ml-2 text-sm text-gray-600">{feedback.rating}/5</span>
               </div>
-              
+
               <div className="bg-gray-50 rounded-lg p-4 mb-4">
                 <p className="text-gray-700 leading-relaxed">"{feedback.feedback}"</p>
               </div>
-              
+
               <div className="flex justify-end space-x-3">
                 <Button variant="outline" size="sm">
                   Mark as Reviewed
@@ -325,7 +325,7 @@ const AdminFeedback = () => {
             <div className="text-sm text-gray-700">
               Showing {startIndex + 1} to {Math.min(endIndex, filteredFeedback.length)} of {filteredFeedback.length} entries
             </div>
-            
+
             <div className="flex items-center space-x-2">
               <Button
                 variant="outline"
@@ -336,23 +336,22 @@ const AdminFeedback = () => {
               >
                 <ChevronLeft className="h-4 w-4" />
               </Button>
-              
+
               {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                 <Button
                   key={page}
                   variant={currentPage === page ? "default" : "outline"}
                   size="sm"
                   onClick={() => setCurrentPage(page)}
-                  className={`h-8 w-8 p-0 ${
-                    currentPage === page
-                      ? "bg-primary hover:bg-primary-dark text-white"
-                      : ""
-                  }`}
+                  className={`h-8 w-8 p-0 ${currentPage === page
+                    ? "bg-primary hover:bg-primary-dark text-white"
+                    : ""
+                    }`}
                 >
                   {page}
                 </Button>
               ))}
-              
+
               <Button
                 variant="outline"
                 size="sm"
