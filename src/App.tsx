@@ -16,7 +16,6 @@ import Admin from "@/pages/admin";
 
 import { useLocation } from 'wouter';
 import { useEffect, useRef } from 'react';
-import { Footer } from "react-day-picker";
 
 
 // Initialize AOS
