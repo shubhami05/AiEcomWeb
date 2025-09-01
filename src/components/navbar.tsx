@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Bot, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 
@@ -7,13 +7,6 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    setIsMobileMenuOpen(false);
-  };
 
   const handleNavigation = (item: (typeof navItems)[0]) => {
     if (item.isPage) {

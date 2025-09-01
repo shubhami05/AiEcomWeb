@@ -1,4 +1,4 @@
-import { Bot, Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail, X } from "lucide-react";
+import { Facebook, Linkedin, Instagram, MapPin, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -8,12 +8,12 @@ const Footer = () => {
     }
   };
 
-  const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-  ];
+  // const socialLinks = [
+  //   { icon: Facebook, href: "#", label: "Facebook" },
+  //   { icon: Twitter, href: "#", label: "Twitter" },
+  //   { icon: Linkedin, href: "#", label: "LinkedIn" },
+  //   { icon: Instagram, href: "#", label: "Instagram" },
+  // ];
 
   const quickLinks = [
     { label: "About Us", action: () => scrollToSection("about") },
