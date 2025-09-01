@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Play, ExternalLink, Star, Send, Heart } from "lucide-react";
+import { Star, Send, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/navbar";

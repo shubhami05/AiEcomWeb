@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CheckCircle, TrendingUp, Shield, Eye, ArrowRight, X, CreditCard, Smartphone } from "lucide-react";
+import { CheckCircle, ArrowRight, X, CreditCard, Smartphone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/navbar";
