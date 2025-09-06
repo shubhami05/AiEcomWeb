@@ -21,7 +21,7 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", href: "/", isPage: true },
     { label: "Plans", href: "/plans", isPage: true },
-    { label: "Services", href: "/services", isPage: true },
+    { label: "Feedback", href: "/feedback", isPage: true },
     { label: "Contact", href: "/contact", isPage: true },
     { label: "About us", href: "/about", isPage: true },
   ];
