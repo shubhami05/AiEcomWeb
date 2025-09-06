@@ -39,7 +39,7 @@ const Navbar = () => {
               <img src="/Logo.png" alt="Logo" className="h-14 w-auto bg-transparent" />
               <div className="flex sm:flex-col space-x-1 sm:space-x-0 sm:-space-y-2   ">
               <span className="text-lg font-bold text-gray-900 font-logo">
-                AI E-commerce
+                A1 E-commerce
               </span>
               <span className="text-lg font-bold text-gray-900 font-logo">
                 Expert
