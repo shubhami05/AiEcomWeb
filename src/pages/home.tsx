@@ -12,14 +12,11 @@ import {
   Headphones,
   ChevronDown,
   ChevronUp,
-  ShoppingCart,
   Smartphone,
   Monitor,
   Megaphone,
-  BarChart3,
   Award,
   Users,
-  Clipboard,
   Tag,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -97,14 +94,9 @@ const Home = () => {
 
   const services = [
     {
-      icon: ShoppingCart,
-      title: "International E-Comm.",
-      description: "Global marketplace expansion and international selling strategies"
-    },
-    {
-      icon: Smartphone,
-      title: "Domestic E-Comm.",
-      description: "Local market optimization and domestic sales enhancement"
+      icon: Award,
+      title: "Branding",
+      description: "Brand development and identity management"
     },
     {
       icon: Monitor,
@@ -117,24 +109,14 @@ const Home = () => {
       description: "Digital marketing strategies and campaign management"
     },
     {
-      icon: BarChart3,
-      title: "Reporting",
-      description: "Comprehensive analytics and performance reporting"
-    },
-    {
-      icon: Award,
-      title: "Branding",
-      description: "Brand development and identity management"
+      icon: Smartphone,
+      title: "Domestic E-Comm.",
+      description: "Local market optimization and domestic sales enhancement"
     },
     {
       icon: Users,
       title: "Business Consulting",
       description: "Strategic business advice and growth consulting"
-    },
-    {
-      icon: Clipboard,
-      title: "Logistics",
-      description: "Supply chain management and fulfillment solutions"
     },
     {
       icon: Tag,
@@ -397,7 +379,7 @@ const Home = () => {
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
               <div className="w-full h-full flex items-center justify-center">
-                <ShoppingCart size={400} className="text-primary" />
+                <Store size={400} className="text-primary" />
               </div>
             </div>
             
