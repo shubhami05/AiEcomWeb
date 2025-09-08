@@ -442,7 +442,7 @@ const Home = () => {
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <div className="text-center mb-16" data-aos="fade-up">
+          <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-title">
               Platforms <span className="text-primary">A1 E-commerce Expert</span> teach for your E-commerce business
             </h2>
@@ -451,99 +451,57 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Platforms Diagram */}
-          <div className="relative" data-aos="fade-up" data-aos-delay="200">
-            {/* Main Connection Line */}
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-primary/20 transform -translate-y-1/2">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+          {/* Platforms Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Amazon */}
+            <div className="flex flex-col items-center group">
+              <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border-2 border-orange-200">
+                <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
+                  <span className="text-orange-500 font-bold text-lg">a</span>
+                </div>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 font-title">Amazon</h3>
+              <p className="text-sm text-gray-600 text-center font-content">Global marketplace leader</p>
             </div>
 
-            {/* Top Row - Major Platforms */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-              {/* Amazon */}
-              <div className="flex flex-col items-center group" data-aos="fade-up" data-aos-delay="300">
-                <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border-2 border-orange-200">
-                  <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
-                    <span className="text-orange-500 font-bold text-lg">a</span>
+            {/* Walmart */}
+            <div className="flex flex-col items-center group">
+              <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border-2 border-blue-200">
+                <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">★</span>
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 font-title">Amazon</h3>
-                <p className="text-sm text-gray-600 text-center font-content">Global marketplace leader</p>
               </div>
-
-              {/* Walmart */}
-              <div className="flex flex-col items-center group" data-aos="fade-up" data-aos-delay="400">
-                <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border-2 border-blue-200">
-                  <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">★</span>
-                    </div>
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 font-title">Walmart</h3>
-                <p className="text-sm text-gray-600 text-center font-content">Retail giant marketplace</p>
-              </div>
-
-              {/* eBay */}
-              <div className="flex flex-col items-center group" data-aos="fade-up" data-aos-delay="500">
-                <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border-2 border-blue-200">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">e</span>
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 font-title">eBay</h3>
-                <p className="text-sm text-gray-600 text-center font-content">Auction & fixed price</p>
-              </div>
-
-              {/* Flipkart */}
-              <div className="flex flex-col items-center group" data-aos="fade-up" data-aos-delay="600">
-                <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border-2 border-blue-200">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">F</span>
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 font-title">Flipkart</h3>
-                <p className="text-sm text-gray-600 text-center font-content">India's leading marketplace</p>
-              </div>
+              <h3 className="text-lg font-semibold text-gray-900 font-title">Walmart</h3>
+              <p className="text-sm text-gray-600 text-center font-content">Retail giant marketplace</p>
             </div>
 
-            {/* Connection Arrows */}
-            <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div className="flex space-x-8">
-                <div className="w-8 h-8 border-2 border-dashed border-primary rounded-full flex items-center justify-center">
-                  <ArrowRight className="text-primary" size={16} />
-                </div>
-                <div className="w-8 h-8 border-2 border-dashed border-primary rounded-full flex items-center justify-center">
-                  <ArrowRight className="text-primary" size={16} />
-                </div>
-                <div className="w-8 h-8 border-2 border-dashed border-primary rounded-full flex items-center justify-center">
-                  <ArrowRight className="text-primary" size={16} />
+            {/* eBay */}
+            <div className="flex flex-col items-center group">
+              <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border-2 border-blue-200">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-xs">e</span>
                 </div>
               </div>
+              <h3 className="text-lg font-semibold text-gray-900 font-title">eBay</h3>
+              <p className="text-sm text-gray-600 text-center font-content">Auction & fixed price</p>
             </div>
 
-            {/* Bottom Section - Additional Services */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-              <div className="text-center" data-aos="fade-up" data-aos-delay="700">
-                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-lg">E</span>
+            {/* Flipkart */}
+            <div className="flex flex-col items-center group">
+              <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border-2 border-blue-200">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-xs">F</span>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 font-title">E-commerce Solutions</h3>
-                <p className="text-sm text-gray-600 font-content">Complete business setup & management</p>
               </div>
-
-              <div className="text-center" data-aos="fade-up" data-aos-delay="800">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-lg">A</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 font-title">Alibaba.com</h3>
-                <p className="text-sm text-gray-600 font-content">Global sourcing & wholesale</p>
-              </div>
+              <h3 className="text-lg font-semibold text-gray-900 font-title">Flipkart</h3>
+              <p className="text-sm text-gray-600 text-center font-content">India's leading marketplace</p>
             </div>
           </div>
 
           {/* Call to Action */}
-          <div className="text-center mt-16" data-aos="fade-up" data-aos-delay="900">
+          <div className="text-center mt-16">
             <Link href="/plans">
               <Button className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors font-button">
                 Start Learning Today
