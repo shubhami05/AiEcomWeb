@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { 
-  ShoppingCart, 
-  Package, 
   TrendingUp, 
   Globe, 
   Users, 
@@ -53,6 +51,13 @@ const Services = () => {
       <section className="bg-gradient-to-br from-blue-50 to-teal-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <div className="flex justify-center mb-6">
+              <img 
+                src="/src/assets/small_cer.png" 
+                alt="Amazon SPN Certified" 
+                className="h-16 w-auto"
+              />
+            </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 font-title">
               E-commerce <span className="text-primary">Services</span>
             </h1>
@@ -162,13 +167,21 @@ const Services = () => {
               <div className="w-full max-w-md">
                 {activeTab === "zero-inventory" ? (
                   <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-8 text-center">
-                    <ShoppingCart className="text-blue-600 mx-auto mb-4" size={80} />
+                    <img 
+                      src="/src/assets/certificate_1.png" 
+                      alt="Zero Inventory Model Certificate" 
+                      className="w-full h-48 object-contain mx-auto mb-4 rounded-lg"
+                    />
                     <h4 className="text-xl font-semibold text-gray-900 mb-2 font-title">Zero Inventory</h4>
                     <p className="text-gray-600 font-content">Start without upfront investment</p>
                   </div>
                 ) : (
                   <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl p-8 text-center">
-                    <Package className="text-green-600 mx-auto mb-4" size={80} />
+                    <img 
+                      src="/src/assets/model_2.png" 
+                      alt="FBA Model with Inventory" 
+                      className="w-full h-48 object-contain mx-auto mb-4 rounded-lg"
+                    />
                     <h4 className="text-xl font-semibold text-gray-900 mb-2 font-title">FBA Model</h4>
                     <p className="text-gray-600 font-content">Professional fulfillment services</p>
                   </div>
