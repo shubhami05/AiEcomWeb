@@ -105,4 +105,32 @@
   .font-logo {
     font-family: 'Roboto', sans-serif;
   }
+  
+  .bg-teal-50 {
+    background-color: hsl(183, 85%, 95%);
+  }
+  
+  .bg-teal-100 {
+    background-color: hsl(183, 85%, 90%);
+  }
+  
+  .bg-teal-500 {
+    background-color: hsl(183, 85%, 42%);
+  }
+  
+  .bg-teal-600 {
+    background-color: hsl(183, 85%, 32%);
+  }
+  
+  .border-teal-500 {
+    border-color: hsl(183, 85%, 42%);
+  }
+  
+  .text-teal-500 {
+    color: hsl(183, 85%, 42%);
+  }
+  
+  .hover\:bg-teal-600:hover {
+    background-color: hsl(183, 85%, 32%);
+  }
 }

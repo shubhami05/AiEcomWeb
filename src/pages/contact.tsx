@@ -48,7 +48,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Contact Form */}
             <div>
-              <Card className="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-6 sm:p-8 shadow-lg border-2 border-primary/20">
+              <Card className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-3xl p-6 sm:p-8 shadow-lg border-2 border-primary/20">
                 <CardContent className="p-0">
                   <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center font-title">
                     Contact Form
@@ -66,7 +66,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         placeholder="Your Name"
-                        className="w-full px-4 py-3 border-2 border-primary/30 rounded-lg focus:outline-none focus:border-green-500 transition-colors font-content"
+                        className="w-full px-4 py-3 border-2 border-primary/30 rounded-lg focus:outline-none focus:border-teal-500 transition-colors font-content"
                         required
                       />
                     </div>
@@ -82,7 +82,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="Your Email Address"
-                        className="w-full px-4 py-3 border-2 border-primary/30 rounded-lg focus:outline-none focus:border-green-500 transition-colors font-content"
+                        className="w-full px-4 py-3 border-2 border-primary/30 rounded-lg focus:outline-none focus:border-teal-500 transition-colors font-content"
                         required
                       />
                     </div>
@@ -98,7 +98,7 @@ const Contact = () => {
                         value={formData.mobile}
                         onChange={handleInputChange}
                         placeholder="Your Mobile Number"
-                        className="w-full px-4 py-3 border-2 border-primary/30 rounded-lg focus:outline-none focus:border-green-500 transition-colors font-content"
+                        className="w-full px-4 py-3 border-2 border-primary/30 rounded-lg focus:outline-none focus:border-teal-500 transition-colors font-content"
                         required
                       />
                     </div>
@@ -122,7 +122,7 @@ const Contact = () => {
                     <div className="text-center">
                       <Button 
                         type="submit"
-                        className="bg-green-500 text-white px-12 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition-colors font-button"
+                        className="bg-teal-500 text-white px-12 py-4 rounded-full text-lg font-semibold hover:bg-teal-600 transition-colors font-button"
                       >
                         Submit
                       </Button>
