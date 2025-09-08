@@ -7,7 +7,12 @@ import {
   ArrowRight,
   CheckCircle,
   Star,
-  Zap
+  Zap,
+  Award,
+  Monitor,
+  Megaphone,
+  Smartphone,
+  Tag
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -41,6 +46,39 @@ const Services = () => {
     { icon: Globe, value: "4.9B", label: "Global Online Shoppers" },
     { icon: BarChart3, value: "$6.3T", label: "E-commerce Market Value" },
     { icon: Users, value: "85%", label: "Mobile Commerce Adoption" }
+  ];
+
+  const ecommerceServices = [
+    {
+      icon: Award,
+      title: "Branding",
+      description: "Brand development and identity management"
+    },
+    {
+      icon: Monitor,
+      title: "Product Cataloging",
+      description: "Professional product listing and catalog management"
+    },
+    {
+      icon: Megaphone,
+      title: "Marketing",
+      description: "Digital marketing strategies and campaign management"
+    },
+    {
+      icon: Smartphone,
+      title: "Domestic E-Comm.",
+      description: "Local market optimization and domestic sales enhancement"
+    },
+    {
+      icon: Users,
+      title: "Business Consulting",
+      description: "Strategic business advice and growth consulting"
+    },
+    {
+      icon: Tag,
+      title: "Private Label",
+      description: "Private label development and brand creation"
+    }
   ];
 
   return (
@@ -188,6 +226,52 @@ const Services = () => {
                 )}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* E-commerce Services Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-title">
+              Our <span className="text-primary">E-commerce Services</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto font-content">
+              Comprehensive solutions to help you succeed in the competitive e-commerce landscape
+            </p>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {ecommerceServices.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <Card
+                  key={index}
+                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-0 group cursor-pointer"
+                >
+                  <CardContent className="p-0">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                        <IconComponent 
+                          className="text-blue-600 group-hover:text-white transition-colors duration-300" 
+                          size={24} 
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-2 font-title group-hover:text-primary transition-colors duration-300">
+                          {service.title}
+                        </h3>
+                        <p className="text-sm text-gray-600 leading-relaxed font-content">
+                          {service.description}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
