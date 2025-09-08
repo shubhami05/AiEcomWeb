@@ -44,9 +44,10 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
 
+      <div className="flex-1">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 to-teal-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -314,6 +315,7 @@ const Services = () => {
           </Link>
         </div>
       </section>
+      </div>
 
       <Footer />
     </div>

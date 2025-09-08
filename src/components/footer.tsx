@@ -1,23 +1,9 @@
 import { Facebook, Linkedin, Instagram, MapPin, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
-  // const socialLinks = [
-  //   { icon: Facebook, href: "#", label: "Facebook" },
-  //   { icon: Twitter, href: "#", label: "Twitter" },
-  //   { icon: Linkedin, href: "#", label: "LinkedIn" },
-  //   { icon: Instagram, href: "#", label: "Instagram" },
-  // ];
-
   const quickLinks = [
-    { label: "About Us", action: () => scrollToSection("about") },
-    { label: "Our Services", action: () => scrollToSection("services") },
+    { label: "About Us", href: "/about" },
+    { label: "Our Services", href: "/services" },
     { label: "Privacy Policy", href: "#privacy" },
     { label: "Terms of Service", href: "#terms" },
   ];
@@ -33,38 +19,29 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1" data-aos="fade-up">
+          <div className="lg:col-span-1">
            <img src="/Footer_logo.png" alt="Footer logo" className="h-64 w-64"/>
           </div>
 
           {/* Quick Links */}
-          <div data-aos="fade-up" data-aos-delay="100">
+          <div>
             <h3 className="text-lg font-semibold mb-6 font-title">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  {link.action ? (
-                    <button
-                      onClick={link.action}
-                      className="opacity-90 hover:opacity-100 transition-opacity text-left font-content"
-                    >
-                      {link.label}
-                    </button>
-                  ) : (
-                    <a
-                      href={link.href}
-                      className="opacity-90 hover:opacity-100 transition-opacity font-content"
-                    >
-                      {link.label}
-                    </a>
-                  )}
+                  <a
+                    href={link.href}
+                    className="opacity-90 hover:opacity-100 transition-opacity font-content"
+                  >
+                    {link.label}
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div data-aos="fade-up" data-aos-delay="200">
+          <div>
             <h3 className="text-lg font-semibold mb-6 font-title">Contact Us</h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
@@ -97,7 +74,7 @@ const Footer = () => {
           </div>
 
           {/* Follow Us */}
-          <div data-aos="fade-up" data-aos-delay="300">
+          <div>
             <h3 className="text-lg font-semibold mb-6 font-title">Follow Us</h3>
             <div className="space-y-3">
               {followUsLinks.map((social, index) => {
