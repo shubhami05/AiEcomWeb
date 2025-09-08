@@ -17,13 +17,6 @@ const About = () => {
   return (
     <div className="min-h-screen w-full bg-white" >
       <Navbar />
-
-      <div>
-        
-      </div>
-
-
-
       {/* Main Content */}
       <section className="py-20 lg:py-28 relative">
         {/* Bottom Left Shape */}
@@ -35,7 +28,7 @@ const About = () => {
             {/* Text Content Founder */}
             <div data-aos="fade-right">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight mb-8">
-                Meet Our <span className="text-green-500">Founder & CEO</span>
+                Meet Our <span style={{color:"hsl(183, 85.00%, 42.00%)"}}>Founder & CEO</span>
               </h1>
 
               <div className="mb-8 ">
@@ -102,12 +95,12 @@ const About = () => {
 
               <div className="mb-8 ">
                 <p className="text-lg text-gray-900 mb-4 ml-4">
-                  <span className="text-green-500 font-medium">Bulls & Bears</span> is a data-driven stock market insights platform designed to help <em>traders and investors</em> make smarter decisions. While we do not provide financial advisory services, our team of experienced analysts shares stock recommendations based on extensive market research.
+                  <span style={{color:"hsl(183, 85.00%, 42.00%)"}}>Bulls & Bears</span> is a data-driven stock market insights platform designed to help <em>traders and investors</em> make smarter decisions. While we do not provide financial advisory services, our team of experienced analysts shares stock recommendations based on extensive market research.
                 </p>
               </div>
 
               <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-6">
-                Our <span className="text-green-500">Mission</span>
+                Our <span className="text-green-500" style={{color:"hsl(183, 85.00%, 42.00%)"}}>Mission</span>
               </h2>
 
               <p className="text-lg ml-4 text-gray-900">

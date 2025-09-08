@@ -49,7 +49,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Contact Form */}
             <div>
-              <Card className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-3xl p-6 sm:p-8 shadow-lg border-2 border-primary/20">
+              <Card className="rounded-3xl p-6 sm:p-8 shadow-lg border-2 border-primary/20" style={{backgroundColor:"hsl(183, 85.00%, 95.00%)" }}>
                 <CardContent className="p-0">
                   <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center font-title">
                     Contact Form
