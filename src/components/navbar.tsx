@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Bot, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 
@@ -7,13 +7,6 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    setIsMobileMenuOpen(false);
-  };
 
   const handleNavigation = (item: (typeof navItems)[0]) => {
     if (item.isPage) {
@@ -28,7 +21,7 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", href: "/", isPage: true },
     { label: "Plans", href: "/plans", isPage: true },
-    { label: "Services", href: "/services", isPage: true },
+    { label: "Feedback", href: "/feedback", isPage: true },
     { label: "Contact", href: "/contact", isPage: true },
     { label: "About us", href: "/about", isPage: true },
   ];
@@ -46,7 +39,7 @@ const Navbar = () => {
               <img src="/Logo.png" alt="Logo" className="h-14 w-auto bg-transparent" />
               <div className="flex sm:flex-col space-x-1 sm:space-x-0 sm:-space-y-2   ">
               <span className="text-lg font-bold text-gray-900 font-logo">
-                AI E-commerce
+                A1 E-commerce
               </span>
               <span className="text-lg font-bold text-gray-900 font-logo">
                 Expert

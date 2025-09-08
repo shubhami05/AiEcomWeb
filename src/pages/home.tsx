@@ -103,7 +103,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" style={{overflowX:'hidden'}}>
       <Navbar />
 
       {/* Hero Section */}
@@ -142,6 +142,59 @@ const Home = () => {
                   </Button>
                 </Link>
 
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certificate & No Inventory Model Section */}
+      <section className="bg-gradient-to-r from-orange-50 to-teal-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Certificate */}
+            <div className="flex justify-center lg:justify-start" data-aos="fade-right">
+              <div className="relative">
+                <img 
+                  src="/src/assets/certificate_1.png" 
+                  alt="Amazon Global Affiliate Partner Certificate" 
+                  className="w-full max-w-md h-auto shadow-2xl rounded-lg"
+                />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="text-center lg:text-left" data-aos="fade-left">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 font-title">
+                No Inventory <span className="text-primary">Model</span>
+              </h2>
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed font-content">
+                Our comprehensive drop shipping business model equips new entrepreneurs with the skills and knowledge needed to succeed in the e-commerce industry. From finding profitable products to managing inventory and customer service, we cover it all. Join us and transform your ambitions into a thriving online business.
+              </p>
+              <p className="text-base text-gray-600 mb-8 font-content">
+                Don't Hesitate - Take this chance to boost your e-commerce skills and achieve outstanding success.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row items-center gap-4">
+                <Link href="/plans">
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors font-button">
+                    Buy Now
+                  </Button>
+                </Link>
+                
+                {/* Amazon SPN Certified Logo */}
+                <div className="flex items-center gap-2">
+                  <img 
+                    src="/src/assets/small_cer.png" 
+                    alt="Amazon SPN Certified" 
+                    className="h-12 w-auto"
+                  />
+                  <div className="text-left">
+                    <div className="text-sm font-semibold text-gray-900">amazon spn</div>
+                    <div className="text-xs text-gray-600">certified</div>
+                    <div className="text-xs text-gray-500">Service Provider Network</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

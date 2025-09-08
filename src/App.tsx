@@ -16,7 +16,6 @@ import Admin from "@/pages/admin";
 
 import { useLocation } from 'wouter';
 import { useEffect, useRef } from 'react';
-import { Footer } from "react-day-picker";
 
 
 // Initialize AOS
@@ -31,7 +30,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/plans" component={Plans} />
-      <Route path="/services" component={Services} />
+      <Route path="/feedback" component={Services} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/admin" component={Admin} />

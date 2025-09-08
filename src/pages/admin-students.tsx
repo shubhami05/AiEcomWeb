@@ -63,18 +63,18 @@ const AdminStudents = () => {
   const currentStudents = filteredStudents.slice(startIndex, endIndex);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-50">
+    <div className="min-h-screen bg-white" style={{overflow:"hidden"}}>
       {/* Header with Navigation */}
       <div className="bg-gradient-to-r from-cyan-100 to-blue-100 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex items-center">
+            <Link to="/admin" className="flex items-center">
               <img src="/Logo.png" alt="Logo" className="h-10 w-auto" />
               <span className="ml-3 text-lg font-bold text-gray-900">
                 A1 Ecommerce Expert
               </span>
-            </div>
+            </Link>
 
             {/* Navigation */}
             <div className="flex items-center space-x-8">
@@ -90,9 +90,15 @@ const AdminStudents = () => {
               >
                 Students
               </Link>
-              <Link href="/admin">
+              <Link
+                href="/admin/feedback"
+                className="text-gray-600 font-medium  border-gray-900 "
+              >
+                Feedback
+              </Link>
+              <Link href="/">
                 <Button className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800">
-                  Admin
+                  Logout
                 </Button>
               </Link>
             </div>
@@ -105,7 +111,7 @@ const AdminStudents = () => {
         {/* Page Title and Search */}
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-2xl font-bold text-gray-900">Students</h1>
-          
+
           <div className="relative w-80">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
             <Input
@@ -198,7 +204,7 @@ const AdminStudents = () => {
           <div className="text-sm text-gray-700">
             Showing data 1 to {Math.min(endIndex, filteredStudents.length)} of {filteredStudents.length} entries
           </div>
-          
+
           <div className="flex items-center space-x-2">
             <Button
               variant="outline"
@@ -209,23 +215,22 @@ const AdminStudents = () => {
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
-            
+
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
               <Button
                 key={page}
                 variant={currentPage === page ? "default" : "outline"}
                 size="sm"
                 onClick={() => setCurrentPage(page)}
-                className={`h-8 w-8 p-0 ${
-                  currentPage === page
+                className={`h-8 w-8 p-0 ${currentPage === page
                     ? "bg-green-500 hover:bg-green-600 text-white"
                     : ""
-                }`}
+                  }`}
               >
                 {page}
               </Button>
             ))}
-            
+
             {totalPages < 5 && (
               <>
                 <span className="text-gray-400">...</span>
@@ -234,7 +239,7 @@ const AdminStudents = () => {
                 </Button>
               </>
             )}
-            
+
             <Button
               variant="outline"
               size="sm"

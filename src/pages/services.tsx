@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Play, ExternalLink, Star, Send, Heart } from "lucide-react";
+import { Star, Send, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/navbar";
@@ -79,20 +79,21 @@ const Feedback = () => {
             <div className="max-w-4xl mx-auto">
               {/* YouTube Channel Embed */}
               <div className="bg-white rounded-2xl shadow-lg border-0 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                <div className="p-6 bg-gradient-to-r from-red-500 to-red-600 text-white">
+                <div className="p-6 bg-primary text-white">
                   <h3 className="text-2xl font-bold font-title mb-2">A1 Ecommerce Expert</h3>
                   <p className="text-white/90 font-content">Watch our latest e-commerce training videos</p>
                 </div>
                 <div className="p-6">
                   <iframe
-                    src="https://www.youtube.com/@A1EcommerceExpert"
+                    // only use "embed" before video id even for shorts: "https://www.youtube.com/embed/"
+                    src="https://www.youtube.com/embed/7JOLI3frfNE"
                     title="A1 Ecommerce Expert YouTube Channel"
                     className="w-full h-96 rounded-lg"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                  ></iframe>
-                  <div className="mt-4 text-center">
+                  />
+                  {/* <div className="mt-4 text-center">
                     <a 
                       href="https://www.youtube.com/@A1EcommerceExpert" 
                       target="_blank" 
@@ -102,7 +103,7 @@ const Feedback = () => {
                       <ExternalLink size={16} />
                       <span>Visit Full Channel</span>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
