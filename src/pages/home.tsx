@@ -12,6 +12,15 @@ import {
   Headphones,
   ChevronDown,
   ChevronUp,
+  ShoppingCart,
+  Smartphone,
+  Monitor,
+  Megaphone,
+  BarChart3,
+  Award,
+  Users,
+  Clipboard,
+  Tag,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -84,6 +93,54 @@ const Home = () => {
         "Get help anytime! Our 24-hour team will be dedicated to your online store goals",
 
     },
+  ];
+
+  const services = [
+    {
+      icon: ShoppingCart,
+      title: "International E-Comm.",
+      description: "Global marketplace expansion and international selling strategies"
+    },
+    {
+      icon: Smartphone,
+      title: "Domestic E-Comm.",
+      description: "Local market optimization and domestic sales enhancement"
+    },
+    {
+      icon: Monitor,
+      title: "Product Cataloging",
+      description: "Professional product listing and catalog management"
+    },
+    {
+      icon: Megaphone,
+      title: "Marketing",
+      description: "Digital marketing strategies and campaign management"
+    },
+    {
+      icon: BarChart3,
+      title: "Reporting",
+      description: "Comprehensive analytics and performance reporting"
+    },
+    {
+      icon: Award,
+      title: "Branding",
+      description: "Brand development and identity management"
+    },
+    {
+      icon: Users,
+      title: "Business Consulting",
+      description: "Strategic business advice and growth consulting"
+    },
+    {
+      icon: Clipboard,
+      title: "Logistics",
+      description: "Supply chain management and fulfillment solutions"
+    },
+    {
+      icon: Tag,
+      title: "Private Label",
+      description: "Private label development and brand creation"
+    }
   ];
 
   const faqs = [
@@ -177,7 +234,9 @@ const Home = () => {
               
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <Link href="/plans">
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors font-button">
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors font-button" onClick={() => {
+                    window.location.href = "/plans";
+                  }}>
                     Buy Now
                   </Button>
                 </Link>
@@ -195,6 +254,44 @@ const Home = () => {
                     <div className="text-xs text-gray-500">Service Provider Network</div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FBA Model with Inventory Section */}
+      <section className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <div className="text-center lg:text-left" data-aos="fade-right">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 font-title">
+                Maximize your product sales with expert <span className="text-primary">account management & consulting</span>
+              </h2>
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed font-content">
+                Learn the secrets of successful smart drop shipping and start your own profitable online business today.
+              </p>
+              
+              <div className="flex justify-center lg:justify-start">
+                <Link href="/plans">
+                  <Button className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors font-button" onClick={() => {
+                    window.location.href = "/plans";
+                  }}>
+                    Know More
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Illustration */}
+            <div className="flex justify-center lg:justify-end" data-aos="fade-left">
+              <div className="relative">
+                <img 
+                  src="/src/assets/model_2.png" 
+                  alt="FBA Model with Inventory Management" 
+                  className="w-full max-w-lg h-auto"
+                />
               </div>
             </div>
           </div>
@@ -277,6 +374,63 @@ const Home = () => {
                       </div>
                     )}
                   </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Offer - Services Section */}
+      <section className="bg-white py-20 min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-16" data-aos="fade-up">
+            <p className="text-lg text-gray-600 mb-4 font-content">What VPN offers</p>
+            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-8 font-title">
+              Elevate Your E-commerce Business with <span className="text-primary">Comprehensive Management</span>
+            </h2>
+          </div>
+
+          {/* Services Grid */}
+          <div className="relative">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="w-full h-full flex items-center justify-center">
+                <ShoppingCart size={400} className="text-primary" />
+              </div>
+            </div>
+            
+            {/* Services Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+              {services.map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <Card
+                    key={index}
+                    className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-0 group cursor-pointer"
+                    data-aos="fade-up"
+                    data-aos-delay={`${(index + 1) * 100}`}
+                  >
+                    <CardContent className="p-0">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                          <IconComponent 
+                            className="text-blue-600 group-hover:text-white transition-colors duration-300" 
+                            size={24} 
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-gray-900 mb-2 font-title group-hover:text-primary transition-colors duration-300">
+                            {service.title}
+                          </h3>
+                          <p className="text-sm text-gray-600 leading-relaxed font-content">
+                            {service.description}
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 );
               })}
             </div>
