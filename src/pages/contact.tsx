@@ -1,20 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 const Contact = () => {
-  useEffect(() => {
-   // Initialize AOS
-   if (window.AOS) {
-     window.AOS.init({
-       duration: 1000,
-       once: true,
-       offset: 100,
-     });
-   }
- }, []);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -46,7 +36,7 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="py-20 lg:py-22">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20" data-aos="fade-down">
+          <div className="text-center mb-20">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6 font-title px-4">
               Stay <span className="text-primary">Connected</span>
             </h1>
@@ -57,7 +47,7 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Contact Form */}
-            <div data-aos="fade-right" data-aos-delay="500">
+            <div>
               <Card className="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-6 sm:p-8 shadow-lg border-2 border-primary/20">
                 <CardContent className="p-0">
                   <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center font-title">
@@ -143,7 +133,7 @@ const Contact = () => {
             </div>
 
             {/* Illustration */}
-            <div className="flex justify-center" data-aos="fade-left" data-aos-delay="500">
+            <div className="flex justify-center">
               <img src="/Contact_us.png" alt="contact image"/>
             </div>
           </div>

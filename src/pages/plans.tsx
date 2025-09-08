@@ -98,7 +98,7 @@ const Plans = () => {
       icon: CheckCircle,
       title: "monthly support",
       price: "₹5,000",
-      description: "account health and violation management services",
+      description: "1 month support of account health and violation management services",
       bgColor: "bg-gradient-to-br from-gray-50 to-gray-100",
       iconBg: "bg-green-200",
       iconColor: "text-green-600",
