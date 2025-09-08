@@ -131,34 +131,36 @@ const Plans = () => {
               return (
                 <Card
                   key={index}
-                  className={`bg-white  hover:bg-teal-50 rounded-lg sm:w-80 w-full p-8 text-center hover:shadow-lg transition-all duration-300 group border-0 shadow-lg`}
+                  className={`bg-white hover:bg-teal-50 rounded-lg sm:w-80 w-full p-8 text-center hover:shadow-lg transition-all duration-300 group border-0 shadow-lg flex flex-col h-full`}
                   data-aos="fade-up"
                   data-aos-delay={`${(index + 1) * 100}`}
                 >
-                  <CardContent className="p-0">
-                    <div className={`w-16 h-16 ${card.iconBg} group-hover:bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}>
-                      <IconComponent className={`${card.iconColor} text-2xl`} size={24} />
+                  <CardContent className="p-0 flex flex-col h-full">
+                    <div className="flex-1">
+                      <div className={`w-16 h-16 ${card.iconBg} group-hover:bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}>
+                        <IconComponent className={`${card.iconColor} text-2xl`} size={24} />
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900 font-title">{card.title}</h3>
+                      <p className="text-secondary text-xl leading-relaxed mb-4 font-content">{card.price}</p>
+                      <p className="text-secondary text-md leading-relaxed font-content">{card.description}</p>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 font-title">{card.title}</h3>
-                    <p className="text-secondary text-xl leading-relaxed mb-4 font-content">{card.price}</p>
-                    <p className="text-secondary text-md leading-relaxed font-content">{card.description}</p>
-
+                    
+                    <div className="text-center mt-8">
+                      <Button 
+                        onClick={() => {
+                          setSelectedPlan(card.title);
+                          setShowForm(true);
+                        }}
+                        className="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-dark transition-colors font-button"
+                      >
+                        Buy Now
+                        <ArrowRight
+                          className="ml-2 transition-transform"
+                          size={20}
+                        />
+                      </Button>
+                    </div>
                   </CardContent>
-                  <div className="text-center  mt-16" >
-                    <Button 
-                      onClick={() => {
-                        setSelectedPlan(card.title);
-                        setShowForm(true);
-                      }}
-                      className="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-dark transition-colors font-button"
-                    >
-                      Buy Now
-                      <ArrowRight
-                        className="ml-2 transition-transform"
-                        size={20}
-                      />
-                    </Button>
-                  </div>
                 </Card>
               );
             })}
@@ -291,22 +293,17 @@ const Plans = () => {
                   <label htmlFor="occupation" className="block text-sm font-medium text-gray-700 mb-1 font-content">
                     Occupation *
                   </label>
-                  <select
+                  <input
+                    type="text"
                     id="occupation"
                     name="occupation"
                     value={formData.occupation}
                     onChange={handleInputChange}
+                    placeholder="Enter your occupation"
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent font-content"
                     required
-                  >
-                    <option value="">Select your occupation</option>
-                    <option value="student">Student</option>
-                    <option value="job">Job/Employee</option>
-                    <option value="housewife">Housewife</option>
-                    <option value="business">Business Owner</option>
-                    <option value="freelancer">Freelancer</option>
-                    <option value="other">Other</option>
-                  </select>
+                  />
+                
                 </div>
 
                 <div>

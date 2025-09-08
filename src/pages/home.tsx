@@ -206,7 +206,7 @@ const Home = () => {
       </section>
 
       {/* Certificate & No Inventory Model Section */}
-      <section className="bg-gradient-to-r from-orange-50 to-teal-50 py-16">
+      <section className="bg-white from-orange-50 to-teal-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Certificate */}
